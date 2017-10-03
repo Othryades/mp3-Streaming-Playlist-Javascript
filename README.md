@@ -1,6 +1,6 @@
-# MailCatcher
+# Mp3 Streamer
 
-Mp3 Streamer
+Mp3 Streamer is an application that store, in the browser local storage of the user, mp3 stream URL in a playlist format
 
 ## Features
 
@@ -20,7 +20,7 @@ Mp3 Streamer
 
 ## Thanks
 
-Mp3 Streamer is just a mishmash of other people's hard work. Thank you so much to the people who have built the wonderful guts on which this project relies.
+Mp3 Streamer is just a mishmash of other people's hard work. Thank you so much to the people who have built wonderful features on which this project relies.
 
 ## Donations
 
