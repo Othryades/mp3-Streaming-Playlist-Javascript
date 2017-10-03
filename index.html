@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<header>
+
+		<title>Music Player</title>
+		<link href="resources/css/style.css" rel="stylesheet" type="text/css">
+		<link href="resources/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+	</header>
+
+	<body>
+
+		<div id="adNewAlbum">
+			<br><button id="addAlb" ><i class="fa fa-plus-circle" aria-hidden="true"></i> add new album</button>
+		</div>
+
+		<div id="inputSearch">
+			<button id="searchAlbum"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+			<input type="name" id="mySearch" placeholder="Search albums">
+		</div>
+
+		<div class="mp3Out" name="#musicpl">
+
+			<div class="mp3player">
+				<audio id="audiomp3" autoplay controls src=""></audio><br>
+				<div id="WindowOfSongs"><br>
+				    <span id="nowPl">NOW PLAYING: </span><span id="nameSterming">1</span><br>
+				    <ul id="newplaylist"></ul>
+				</div>
+
+				<span class="close"></span>
+				<div class="discOnPlay">
+					<img id="discImgPlay">
+					<div class="circle1"><span class="pauseOnPl fa fa-pause"></span><span class="playOnPl fa1 fa-play "></span>
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+
+		<div id="flex"></div>
+
+		<div id="albumWindow">
+			<form><br>
+			<h3>Add new album</h3><br>
+			<hr class="line">
+			<img src="resources/img/1.png" id="imgprv">
+
+			Album Name<br><input type="text" onblur="validateInput(this)" id="nameAlbum" placeholder="e.g. II " class="sty"><br>
+			Author<br><input type="text" onblur="validateInput(this)" id="authorAlbum" placeholder="e.g. Crystal Castles" class="sty">	<br>
+			<span class="textofWindow">Image URL (.Jpg,Png):</span><br>
+			<input type="text" onblur="ValiImg(this)" id="imgurl" placeholder="Http://"class="sty"/><br><br>
+			<br><br>
+			<div class="le" id="submit1">Submit</div>
+			<button type="reset" value="Reset" id="resetBt"></i>Reset Fields</button>
+			<br><br><br>
+			</form>
+		</div>
+
+		<div id="albumWindow2"><br>
+			<form>
+			<span class="textPlaylist">Add album playlist</span><br><br>
+			<div id="scroller">
+				<div class="nameDiv divStyle1">
+					Name:<input type="text" id="nameOfS1" placeholder="Name Of Song" class="nNameSong styInputPl1"/>
+					Name:<input type="text" id="nameOfS2" placeholder="Name Of Song" class="nNameSong styInputPl1"/>
+					Name:<input type="text" id="nameOfS3" placeholder="Name Of Song" class="nNameSong styInputPl1"/>
+					Name:<input type="text" id="nameOfS4" placeholder="Name Of Song" class="nNameSong styInputPl1"/>
+				</div>
+				<div class="urlDiv divStyle">
+					Url:<input type="text" id="urlOfS1" placeholder="Http://" class="urlSong styInputPl1" onblur="valiMp3()"/>
+					Url:<input type="text" id="urlOfS2" placeholder="Http://" class="urlSong styInputPl1" onblur="valiMp3()"/>
+					Url:<input type="text" id="urlOfS3" placeholder="Http://" class="urlSong styInputPl1" onblur="valiMp3()"/>
+					Url:<input type="text" id="urlOfS4" placeholder="Http://" class="urlSong styInputPl1" onblur="valiMp3()"/>
+				</div>
+			</div><br>
+
+			<button class="addFields le1">Add another song</button>
+			<div class="le1" onclick="addAlbums()" id="finishnsave">FINISH & SAVE</div>
+			</form>
+		</div>
+
+		<div id="editAlbum"><br>
+			<span class="textPlaylist">Edit Album</span><br>
+			<div class="edit_name"></div>
+			<div class="edit_songs">
+				<ul></ul>
+			</div>
+			<div class="edit_coverPhoto">
+				<img class="editImg" src="">
+			</div>
+			<input type="text" id="urlOfim" onblur="ValiImg(this)"/>
+			<div class="le2" id="saveEdit">SAVE</div>
+		</div>
+		<script src="vendor/jquery-3.1.0.js"></script>
+		<script src="JQueryLett/jquery.lettering.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/albums.js"></script>
+		<script src="js/localStorage.js"></script>
+
+	</body>
+
+</html>
